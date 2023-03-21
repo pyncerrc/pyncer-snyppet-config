@@ -1,6 +1,6 @@
 <?php
-use Pyncer\Snyppet\SnyppetManager;
 use Pyncer\Snyppet\Snyppet;
+use Pyncer\Snyppet\SnyppetManager;
 
 SnyppetManager::register(new Snyppet(
     'config',
