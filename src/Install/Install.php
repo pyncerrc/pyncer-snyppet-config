@@ -14,6 +14,8 @@ class Install extends AbstractInstall
             ->text('value')
             ->bool('preload')->default(false)->index()
             ->execute();
+
+        return true;
     }
 
     protected function safeUninstall(): bool
@@ -21,5 +23,7 @@ class Install extends AbstractInstall
         if ($connection->hasTable('config')) {
             $this->connection->dropTable('config');
         }
+
+        return true;
     }
 }
