@@ -2,7 +2,7 @@
     "name": "pyncer/snyppet-config",
     "type": "library",
     "description": "Pyncer snyppet for handling storing configuration in a database.",
-    "homepage": "https://pyncer.com/snyppet/access",
+    "homepage": "https://pyncer.com/snyppet/config",
     "license": "Unlicense",
     "require": {
         "php": ">=8.1",
