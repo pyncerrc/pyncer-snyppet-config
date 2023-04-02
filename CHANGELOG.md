@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.0.2 - 2023-04-02
+
+### Fixed
+
+- Fixed issue with uninstall.
+
 ## 1.0.1 - 2023-03-21
 
 ### Fixed
