@@ -16,7 +16,19 @@ class ConfigMiddleware implements MiddlewareInterface
         RequestHandlerInterface $handler
     ): PsrResponseInterface
     {
+        // Database
+        if (!$handler->has(ID::DATABASE)) {
+            throw new UnexpectedValueException(
+                'Database connection expected.'
+            );
+        }
+
         $connection = $handler->get(ID::DATABASE);
+        if (!$connection instanceof ConnectionInterface) {
+            throw new UnexpectedValueException(
+                'Invalid database connection.'
+            );
+        }
 
         $config = new ConfigManager($connection);
 

@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.0.3 - 2023-10-19
+
+### Fixed
+
+- Fixed issue with deleting config values.
+
 ## 1.0.2 - 2023-04-02
 
 ### Fixed

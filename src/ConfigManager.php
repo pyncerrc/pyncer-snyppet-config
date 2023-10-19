@@ -7,7 +7,6 @@ use Pyncer\Database\ConnectionInterface;
 use Pyncer\Database\ConnectionTrait;
 use Pyncer\Utility\Params;
 
-use function iterator_to_array;
 use function Pyncer\Array\data_explode as pyncer_data_explode;
 use function Pyncer\Array\data_implode as pyncer_data_implode;
 
@@ -43,7 +42,7 @@ class ConfigManager extends Params
             return $this;
         }
 
-        $this->set($key, pyncer_data_implode(',', iterator_to_array($value)));
+        $this->set($key, pyncer_data_implode(',', [...$value]));
         return $this;
     }
 
@@ -87,6 +86,8 @@ class ConfigManager extends Params
         $configMapper = new ConfigMapper($this->getConnection());
 
         foreach ($keys as $key) {
+            $configModel = $configMapper->selectByKey($key);
+
             $value = $this->get($key);
 
             if ($value === null) {
@@ -96,8 +97,6 @@ class ConfigManager extends Params
 
                 continue;
             }
-
-            $configModel = $configMapper->selectByKey($key);
 
             if (!$configModel) {
                 $configModel = new ConfigModel();

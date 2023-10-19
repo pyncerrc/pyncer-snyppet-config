@@ -13,6 +13,7 @@ class Install extends AbstractInstall
             ->string('key', 50)->index()
             ->text('value')
             ->bool('preload')->default(false)->index()
+            ->index('#unique', 'key')->unique()
             ->execute();
 
         return true;
