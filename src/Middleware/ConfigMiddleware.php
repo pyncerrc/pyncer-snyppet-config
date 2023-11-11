@@ -36,7 +36,7 @@ class ConfigMiddleware implements MiddlewareInterface
 
         $config->preload();
 
-        ID::register('config');
+        ID::register(ID::config());
 
         $handler->set(ID::config(), $config);
 
