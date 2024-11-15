@@ -1,12 +1,10 @@
 # Change Log
 
-## 1.0.4 - 2024-11-15
+## 1.0.3 - 2024-11-15
 
 ### Updated
 
 - Middleware now uses ID::config() to register instead of string.
-
-## 1.0.3 - 2023-10-19
 
 ### Fixed
 
