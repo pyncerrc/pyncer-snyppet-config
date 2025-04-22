@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.0.4 - Unreleased
+
+### Changed
+
+- Updated psr/http-message to 2.0.
+
 ## 1.0.3 - 2024-11-15
 
 ### Updated
